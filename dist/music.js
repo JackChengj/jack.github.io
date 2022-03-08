@@ -9,7 +9,7 @@ const ap = new APlayer({
         {
             name: 'Please Dont go',
             artist: 'Joel Adams',
-            url: "Joel Adams - Please Don't Go.ncm",
+            url: "Joel Adams - Please Don't Go.flac",
             // cover: 'cover1.jpg',
         },
         // {
