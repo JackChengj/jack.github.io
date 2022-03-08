@@ -9,7 +9,7 @@ const ap = new APlayer({
         {
             name: 'Please Dont go',
             artist: 'Joel Adams',
-            url: "Joel Adams - Please Don't Go.mp3",
+            url: "/dist/Joel Adams - Please Don't Go.mp3",
             // cover: 'cover1.jpg',
         },
         // {
