@@ -1,6 +1,6 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
-    autoplay: true,
+    autoplay: false,
     loop: 'all',
     volume: 0.7,
     listFolded: true,
@@ -9,8 +9,8 @@ const ap = new APlayer({
         {
             name: 'Please Dont go',
             artist: 'Joel Adams',
-            url: "/dist/Joel Adams - Please Don't Go.mp3",
-            // cover: 'cover1.jpg',
+            url: "/dist/Joel Adams - Please Don't Go.flac",
+            cover: "/dist/Joel Adams - Please Don't Go.jpg",
         },
         // {
         //     name: 'name2',
