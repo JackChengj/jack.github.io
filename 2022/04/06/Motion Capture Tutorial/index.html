@@ -23,21 +23,21 @@
   <meta name="description" content="实时位置检测525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见度量官方文档。 界面简介![interface](Motion Capture Tutorial\interface.png) 蓝色方框内用于切换实时模式和回放模式； 橙色方框内用于选择使用某一个markset，即我们希望监测的物体模型（模型需要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Motion Capture Tutorial">
-<meta property="og:url" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/index.html">
+<meta property="og:url" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/index.html">
 <meta property="og:site_name" content="Jack">
 <meta property="og:description" content="实时位置检测525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见度量官方文档。 界面简介![interface](Motion Capture Tutorial\interface.png) 蓝色方框内用于切换实时模式和回放模式； 橙色方框内用于选择使用某一个markset，即我们希望监测的物体模型（模型需要">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/T_test.jpg">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/recording.png">
-<meta property="article:published_time" content="2022-03-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-06T13:59:39.025Z">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/T_test.jpg">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/recording.png">
+<meta property="article:published_time" content="2022-04-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-06T14:03:43.510Z">
 <meta property="article:author" content="Cheng Jie">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="operation tutorial">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/T_test.jpg">
+<meta name="twitter:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/T_test.jpg">
 
-<link rel="canonical" href="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/">
+<link rel="canonical" href="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/">
 
 
 <script id="page-configurations">
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/">
+    <link itemprop="mainEntityOfPage" href="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,16 +188,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2022-03-23 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-23T00:00:00+08:00">2022-03-23</time>
+              <time title="Created: 2022-04-06 00:00:00 / Modified: 22:03:43" itemprop="dateCreated datePublished" datetime="2022-04-06T00:00:00+08:00">2022-04-06</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-04-06 21:59:39" itemprop="dateModified" datetime="2022-04-06T21:59:39+08:00">2022-04-06</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -233,7 +227,7 @@
 <p>Cameras中的Camera Network IP Address是摄像头通过本地网线进行传输的IP，设置为10.1.1.198。</p>
 <p>![setting_calibration](Motion Capture Tutorial\setting_calibration.png)</p>
 <p>一般进行动作捕捉的Calibration中都是选Z轴朝上的右手坐标系，设置如图。</p>
-<h3 id="模型建立"><a href="#模型建立" class="headerlink" title="模型建立"></a>模型建立</h3><p>如果很久没有使用动作捕捉系统，建议使用前进行一次标定，该操作请参考度量的官方文档。</p>
+<h3 id="模型建立"><a href="#模型建立" class="headerlink" title="模型建立"></a>模型建立</h3><p>如果很久没有使用动作捕捉系统，建议使用前进行一次标定，该操作请参考<a href="https://jackchengj.github.io/pdf/NK-cortex%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8Bv20190121.pdf">度量官方文档</a>。</p>
 <h4 id="贴标签"><a href="#贴标签" class="headerlink" title="贴标签"></a>贴标签</h4><p>将度量的反光小球贴在想要测量物体的合适位置，尽量使得反光小球不被物体本身所遮挡，贴好后不要再移动小球位置。例如我们想实时观测T型架的位置，我们给T型架的一条边固定了三个反光小球。</p>
 <img src="Motion Capture Tutorial/T_test.jpg" alt="T_test"  />
 
@@ -244,7 +238,7 @@
 <p>![read_data](Motion Capture Tutorial&#x2F;read_data.png)</p>
 <p>载入数据后，先看一遍，观察所需要的点是否在录制的时间中都出现，如果有丢失的数据，则表示录制的视频不够好，需要重新录制。确保数据没有丢失之后，便可以添加MarkerSets。</p>
 <p>![read_data2](Motion Capture Tutorial&#x2F;read_data2.png)</p>
-<p>创建好之后，需要创建并标注点和刚体，具体操作见度量官方文档。完成以上步骤后，保存markerset为.mars文件。</p>
+<p>创建好之后，需要创建并标注点和刚体，具体操作见<a href="https://jackchengj.github.io/pdf/NK-cortex%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8Bv20190121.pdf">度量官方文档</a>。完成以上步骤后，保存markerset为.mars文件。</p>
 <h3 id="实时检测"><a href="#实时检测" class="headerlink" title="实时检测"></a>实时检测</h3><p>重新切换到实时模式，连接好镜头，在按下播放键前先添加markerset。</p>
 <p>![real_time1](Motion Capture Tutorial&#x2F;real_time1.png)</p>
 <p>添加完之后，按下播放键，移动装有反光点的物体，当出现刚体的画面时，则表示识别成功。这是就可以在屏幕上实时看到物体的位置与姿态了。</p>
