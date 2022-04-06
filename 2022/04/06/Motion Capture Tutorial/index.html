@@ -20,33 +20,35 @@
     var CONFIG = {"hostname":"jackchengj.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="title: Motion Capture Tutorialdate: 2022-04-06categories: Motion Capturetags:   study operation tutorial  实时位置检测525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见度量官方文档。 界面简介">
+  <meta name="description" content="实时位置检测525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见度量官方文档。 界面简介      蓝色方框内用于切换实时模式和回放模式； 橙色方框内用于选择使用某一个markset，即我们希望监测的物体模型（模型需要提前建好）； 绿色方框内用于选择储存的文件夹 红色方框内用于连接镜头以及进行录制 准备工作网">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jack">
-<meta property="og:url" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/index.html">
+<meta property="og:title" content="Motion Capture Tutorial">
+<meta property="og:url" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/index.html">
 <meta property="og:site_name" content="Jack">
-<meta property="og:description" content="title: Motion Capture Tutorialdate: 2022-04-06categories: Motion Capturetags:   study operation tutorial  实时位置检测525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见度量官方文档。 界面简介">
+<meta property="og:description" content="实时位置检测525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见度量官方文档。 界面简介      蓝色方框内用于切换实时模式和回放模式； 橙色方框内用于选择使用某一个markset，即我们希望监测的物体模型（模型需要提前建好）； 绿色方框内用于选择储存的文件夹 红色方框内用于连接镜头以及进行录制 准备工作网">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/interface.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/setting_system.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/setting_cameras.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/setting_calibration.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/T_test.jpg">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/recording.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/read_data.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/read_data2.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/real_time1.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/real_time3.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/VprnServer1.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/VprnServer2.png">
-<meta property="og:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/Screenshot%20from%202022-03-28%2019-49-36.png">
-<meta property="article:published_time" content="2022-03-23T00:12:25.246Z">
-<meta property="article:modified_time" content="2022-04-06T14:17:16.937Z">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/interface.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/setting_system.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/setting_cameras.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/setting_calibration.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/T_test.jpg">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/recording.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/read_data.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/read_data2.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/real_time1.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/real_time3.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/VprnServer1.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/VprnServer2.png">
+<meta property="og:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/Screenshot%20from%202022-03-28%2019-49-36.png">
+<meta property="article:published_time" content="2022-04-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-06T14:33:27.908Z">
 <meta property="article:author" content="Cheng Jie">
+<meta property="article:tag" content="study">
+<meta property="article:tag" content="operation tutorial">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/interface.png">
+<meta name="twitter:image" content="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/Motion%20Capture%20Tutorial/interface.png">
 
-<link rel="canonical" href="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/">
+<link rel="canonical" href="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/">
 
 
 <script id="page-configurations">
@@ -59,7 +61,7 @@
   };
 </script>
 
-  <title> | Jack</title>
+  <title>Motion Capture Tutorial | Jack</title>
   
 
 
@@ -175,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://jackchengj.github.io/2022/03/23/Motion%20Capture%20Tutorial/">
+    <link itemprop="mainEntityOfPage" href="https://jackchengj.github.io/2022/04/06/Motion%20Capture%20Tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          Motion Capture Tutorial
         </h1>
 
         <div class="post-meta">
@@ -197,16 +199,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2022-03-23 08:12:25" itemprop="dateCreated datePublished" datetime="2022-03-23T08:12:25+08:00">2022-03-23</time>
+              <time title="Created: 2022-04-06 00:00:00 / Modified: 22:33:27" itemprop="dateCreated datePublished" datetime="2022-04-06T00:00:00+08:00">2022-04-06</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-04-06 22:17:16" itemprop="dateModified" datetime="2022-04-06T22:17:16+08:00">2022-04-06</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Motion-Capture/" itemprop="url" rel="index"><span itemprop="name">Motion Capture</span></a>
+                </span>
+            </span>
 
           
 
@@ -219,12 +224,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>title: Motion Capture Tutorial<br>date: 2022-04-06<br>categories: Motion Capture<br>tags: </p>
-<ul>
-<li>study</li>
-<li>operation tutorial</li>
-</ul>
-<h2 id="实时位置检测"><a href="#实时位置检测" class="headerlink" title="实时位置检测"></a>实时位置检测</h2><p>525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见<a href="https://jackchengj.github.io/pdf/NK-cortex%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8Bv20190121.pdf">度量官方文档</a>。</p>
+        <h2 id="实时位置检测"><a href="#实时位置检测" class="headerlink" title="实时位置检测"></a>实时位置检测</h2><p>525实验室使用的是北京度量科技有限公司（以下简称度量）的光学动作捕捉系统Seeker1.6.x，总共使用12个摄像头。软件的安装和硬件配置见<a href="https://jackchengj.github.io/pdf/NK-cortex%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8Bv20190121.pdf">度量官方文档</a>。</p>
 <h3 id="界面简介"><a href="#界面简介" class="headerlink" title="界面简介"></a>界面简介</h3>  <img src="Motion Capture Tutorial\interface.png">  
 
 <p>蓝色方框内用于切换实时模式和回放模式；</p>
@@ -284,6 +284,10 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/study/" rel="tag"># study</a>
+              <a href="/tags/operation-tutorial/" rel="tag"># operation tutorial</a>
+          </div>
 
         
 
@@ -370,6 +374,18 @@
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
